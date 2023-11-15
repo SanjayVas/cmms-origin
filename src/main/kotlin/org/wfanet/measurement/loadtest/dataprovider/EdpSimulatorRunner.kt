@@ -102,9 +102,6 @@ abstract class EdpSimulatorRunner : Runnable {
         random = random,
         compositionMechanism = flags.compositionMechanism,
       )
-    runBlocking {
-      edpSimulator.ensureEventGroup(eventGroupMetadata)
-      edpSimulator.run()
-    }
+    runBlocking { edpSimulator.run() }
   }
 }
